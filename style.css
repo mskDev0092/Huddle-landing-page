@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body ............................................ BlockStart */
+
+body {
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: hsl(257, 40%, 49%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: auto;
+}
+main {
+  width: fit-content;
+  height: fit-content;
+}
+.header {
+  gap: 26px;
+  padding-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image-hero ............................................ BlockStart */
+.image {
+  width: 300px;
+  display: block;
+  margin: auto;
+  padding: 0px 0px 35px 0px;
+}
+.logo {
+  width: 150px;
+  padding: 35px 0px 55px 32px;
+}
+/* introductory ............................................ BlockStart */
+.introductory {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1,
+p {
+  color: white;
+  text-align: center;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  padding: 0px 35px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 0px 35px;
+  line-height: 25px;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 150px;
+  height: 5vh;
+  top: 144px;
+  position: sticky;
+  margin-top: 20px;
+  border: none;
+  color: rgb(106, 96, 158);
+  box-shadow: 1px 5px 8px 0.5px #403342;
+}
+
+.btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  box-shadow: rgba(155, 150, 154, 0.25) 0px 4px 5px,
+    rgba(212, 126, 233, 0.12) 0px -12px 30px,
+    rgba(235, 148, 148, 0.12) 0px 4px 6px,
+    rgba(194, 149, 149, 0.17) 0px 12px 13px,
+    rgba(175, 117, 117, 0.09) 0px -3px 5px;
+  border: none;
+  cursor: pointer;
+}
+/* social ............................................ BlockStart */
+
+.social {
+  justify-content: center;
+  display: flex;
+  gap: 26px;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+i {
+  border: 2px solid white;
+  color: aliceblue;
+  justify-content: center;
+  background-position: 50% 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+i:hover {
+  border: 2px solid hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}
+
+/* footer ............................................ BlockStart */
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  display: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 99%);
+}
+/*desktop1 .1.....1....1.................................. responsiveness*/
+@media only screen and (min-width: 700px) {
+  .introductory {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .hero-section{
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .logo{
+    width: 200px;
+  }
+  .image{
+    width: 400px;
+  }
+}
+
+/*desktop ............................................ responsiveness*/
+
+@media only screen and (min-width: 1065px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/bg-desktop.svg);
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    width: 341px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    justify-content: space-between;
+    height: 600px;
+  }
+  .hero-section {
+    background-size: contain;
+    padding-left: 20px;
+    width: 75%;
+    float: left;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    width: auto;
+  }
+  .introductory {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    float: left;
+    padding: 15px;
+    width: fit-content;
+    justify-content: center;
+    align-self: stretch;
+  }
+  h1,
+  p {
+    align-self: flex-start;
+    text-align: left;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .attribution {
+    font-size: 20px;
+    text-align: center;
+    color: hsl(96, 91%, 65%);
+  }
+
+  .attribution a {
+    color: hsl(0, 3%, 6%);
+    font-weight: bolder;
+  }
+  .social {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
